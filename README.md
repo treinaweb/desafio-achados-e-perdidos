@@ -15,6 +15,7 @@
 - [Requisitos](#requisitos)
 - [Diagrama de caso de uso](#diagrama-de-casos-de-uso)
 - [Diagrama do banco de dados](#diagrama-do-banco-de-dados)
+- [Casos de Uso](#casos-de-uso)
 
 ## Descrição
 
