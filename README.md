@@ -19,7 +19,7 @@
 
 ## Descrição
 
-Permitir que pessoas encontrem seus objetos perdidos de maneira mais fácil, além de facilitar a vida de pessoas responsáveis por comércios, condomínios e outro tipo de locais públicos que possuem sala de Achados e Perdidos.
+Permitir que pessoas encontrem seus objetos perdidos de maneira mais fácil, além de facilitar a vida de pessoas responsáveis por comércios, condomínios e outros locais públicos que possuem sala de Achados e Perdidos.
 
 ## Requisitos
 
