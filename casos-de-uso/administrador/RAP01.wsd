@@ -1,4 +1,4 @@
-@startuml RAO01
+@startuml RAP01
 
 actor "Administrador departamento de achados e perdidos" as admin
 participant "Sistema" as sistema

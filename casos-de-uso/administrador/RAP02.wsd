@@ -1,0 +1,60 @@
+@startuml RAP02
+
+actor "Administrador departamento de achados e perdidos" as admin
+participant "Sistema" as sistema
+
+admin -> sistema: Acessa a página de gerenciamento de objetos
+sistema -> sistema: Verifica se o usuário está logado
+
+group Usuário deslogado
+  sistema -> admin: Redireciona para a página de login
+end
+
+group Usuário logado
+  sistema -> admin: Exibe a lista de objetos cadastrados com as opções para edição e exclusão e uma opção de cadastrar objeto
+
+  group Fluxo de cadastro de objeto
+    admin -> sistema: Seleciona a opção "Adicionar Objeto"
+    sistema -> admin: Exibe o formulário de cadastro de objeto
+    admin -> sistema: Preenche e submete os formulário
+    sistema -> sistema: Válida os dados submetidos
+
+    group Dados inválidos
+      sistema -> admin: Exibe os erros de validação
+    end
+
+    group Dados válidos
+      sistema -> sistema: Cadastra o objeto no banco de dados
+      sistema -> admin: Exibe uma mensagem informando que o objeto foi cadastrado com sucesso
+      sistema -> admin: Redireciona para a página de gerenciamento de objetos
+    end
+  end
+
+  group Fluxo de edição de objeto
+    admin -> sistema: Seleciona a opção para editar os dados de um objeto
+    sistema -> admin: Exibe o formulário de edição já preenchido com os dados atuais do objeto
+    admin -> sistema: Preenche e submete o formulário com os novos dados
+    sistema -> sistema: Válida os dados subemtidos
+
+    group Dados inválidos
+      sistema -> admin: Exibe os erros de validação
+    end
+
+    group Dados válidos
+      sistema -> sistema: Atualiza os dados do objeto no banco de dados
+      sistema -> admin: Exibe uma mensagem informando que o objeto foi atualizado
+      sistema -> admin: Redireciona para a página de gerenciamento de objetos
+    end
+  end
+
+  group Fluxo de exclusão de objeto
+    admin -> sistema: Seleciona a opção para excluir um objeto
+    sistema -> admin: Exibe uma mensagem pedindo a confirmação para exclusão
+    admin -> sistema: Confirma a exclusão do objeto
+    sistema -> sistema: Exclui o objeto do banco de dados
+    sistema -> admin: Exibe uma mensagem informando que o objeto foi excluido com sucesso
+    sistema -> admin: Redireciona para a página de gerenciamento de objetos
+  end
+end
+
+@enduml

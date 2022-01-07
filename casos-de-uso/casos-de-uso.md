@@ -30,4 +30,20 @@ Administrador departamento de achados e perdidos
 
 ### Fluxo de eventos
 
-![Diagram do fluxo de eventos do caso de uso RAO01](../out/casos-de-uso/administrador/RAO01/RAO01.png)
+![Diagram do fluxo de eventos do caso de uso RAP01](../out/casos-de-uso/administrador/RAP01/RAP01.png)
+
+## RAP02 - Gerenciar os objetos do local
+
+O sistema deve permitir que o administrador do local realize o cadastro de novos objetos para serem listados na plataforma, além de permitir a alteração dos dados de um objeto existente e sua exclusão.
+
+### Precondição
+
+O usuário deve estar logado no sistema como um dos atores do caso de uso.
+
+### Ator
+
+Administrador departamento de achados e perdidos
+
+### Fluxo de eventos
+
+![Diagram do fluxo de eventos do caso de uso RAP02](../out/casos-de-uso/administrador/RAP02/RAP02.png)
