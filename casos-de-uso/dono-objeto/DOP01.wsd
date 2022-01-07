@@ -23,7 +23,7 @@ group Um ou mais locais encontrados
 
   group Um ou mais objetos cadastrados
     sistema -> dono: Exibe a lista de objetos cadastrados para o local especificado com um opção para entrar em contato
-    dono -> sistema: Seleciona a opção "Entrar em contato" para saber como recuperar o objeto em desejado
+    dono -> sistema: Seleciona a opção "Entrar em contato" para saber como recuperar o objeto desejado
     sistema -> dono: Exibir um pop-up com as informações de contato do local
   end
 end
