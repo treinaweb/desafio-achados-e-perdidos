@@ -24,3 +24,4 @@ Permitir que pessoas encontrem seus objetos perdidos de maneira mais fácil, al�
 
 - [Requisitos do usuário](./requisitos/requisitos-usuario.md)
 - [Requisitos Funcionais](./requisitos/requisitos-funcionais.md)
+- [Requisitos Não Funcionais](./requisitos/requisitos-nao-funcionais.md)
