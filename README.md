@@ -37,3 +37,9 @@ A aplicação possui dois atores, o dono do objeto e o administrador do departam
 A aplicação terá três tabelas que irão se relacionar entre si, sendo elas as tabelas `users`, `locais` e `objetos`. No diagrama abaixo é possível ver os detalhes de cada uma dessas tabelas e como as mesmas se relacionam.
 
 ![Diagrama do banco de dados da aplicação Achados e Perdidos](./diagramas/banco-de-dados.png)
+
+## Casos de Uso
+
+Abaixo pode ser encontrada uma descrição textual mais detalhada sobre cada um casos de uso exitentes na aplicação.
+
+- [Casos de Uso](./casos-de-uso/casos-de-uso.md)
