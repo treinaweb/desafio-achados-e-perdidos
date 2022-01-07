@@ -1,0 +1,31 @@
+@startuml DOP01
+
+actor "Dono Objeto" as dono
+participant "Sistema" as sistema
+
+dono -> sistema: Acessa a página inicial da aplicação
+sistema -> dono: Exibe um campo de busca para que o Dono Objeto possa buscar um local
+dono -> sistema: Informa o nome do local que deseja buscar
+sistema -> sistema: Realiza a busca de locais com base no parâmetro informado
+
+group Nenhum local encontrado
+  sistema -> dono: Informa que nenhum local foi encontrado com base no parâmetro informado
+end
+
+group Um ou mais locais encontrados
+  sistema -> dono: Exibe a lista de locais encontrados com a opção para visualizar os objetos de cada um dos locais
+  dono -> sistema: Seleciona a opção "Ver objetos" para ver os objetos de um local
+  sistema -> sistema: Realiza a busca dos objetos cadastrados para o local desejado
+
+  group Nenhum objeto cadastrado
+    sistema -> dono: Informa que nenhum objeto foi cadastrado para o local especificado
+  end
+
+  group Um ou mais objetos cadastrados
+    sistema -> dono: Exibe a lista de objetos cadastrados para o local especificado com um opção para entrar em contato
+    dono -> sistema: Seleciona a opção "Entrar em contato" para saber como recuperar o objeto em desejado
+    sistema -> dono: Exibir um pop-up com as informações de contato do local
+  end
+end
+
+@enduml
