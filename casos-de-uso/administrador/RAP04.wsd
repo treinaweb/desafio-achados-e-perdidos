@@ -1,0 +1,20 @@
+@startuml RAP04
+
+actor "Administrador departamento de achados e perdidos" as admin
+participant "Sistema" as sistema
+
+admin -> sistema: Acessa a página de login
+sistema -> admin: Exibe o formulário de login
+admin -> sistema: Preenche e submete o formulário
+sistema -> sistema: Válida os dados submetidos
+
+group Dados inválidos
+  sistema -> admin: Exibe os erros de válidação
+end
+
+group Dados válidos
+  sistema -> sistema: Autentica o usuário no sistema
+  sistema -> admin: Redireciona para a página de gerenciamento de objetos
+end
+
+@enduml

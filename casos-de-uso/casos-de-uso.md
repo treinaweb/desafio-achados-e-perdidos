@@ -63,3 +63,19 @@ Administrador departamento de achados e perdidos
 ### Fluxo de eventos
 
 ![Diagram do fluxo de eventos do caso de uso RAP03](../out/casos-de-uso/administrador/RAP03/RAP03.png)
+
+## RAP04 - Realizar login
+
+O administrador do departamento de achados e perdidos poderá realizar login na plataforma. Após o login ele deve ser direcionado para a lista de objetos.
+
+### Precondição
+
+O usuário deve estar cadastrado no sistema como um dos atores do caso de uso.
+
+### Ator
+
+Administrador departamento de achados e perdidos
+
+### Fluxo de eventos
+
+![Diagram do fluxo de eventos do caso de uso RAP04](../out/casos-de-uso/administrador/RAP04/RAP04.png)
