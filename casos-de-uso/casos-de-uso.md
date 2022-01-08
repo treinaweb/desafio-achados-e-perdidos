@@ -47,3 +47,19 @@ Administrador departamento de achados e perdidos
 ### Fluxo de eventos
 
 ![Diagram do fluxo de eventos do caso de uso RAP02](../out/casos-de-uso/administrador/RAP02/RAP02.png)
+
+## RAP03 - Informar dono do objeto
+
+O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue o objeto não poderá mais ser exibido na plataforma.
+
+### Precondição
+
+O usuário deve estar logado no sistema como um dos atores do caso de uso.
+
+### Ator
+
+Administrador departamento de achados e perdidos
+
+### Fluxo de eventos
+
+![Diagram do fluxo de eventos do caso de uso RAP03](../out/casos-de-uso/administrador/RAP03/RAP03.png)
