@@ -95,3 +95,19 @@ Administrador departamento de achados e perdidos
 ### Fluxo de eventos
 
 ![Diagram do fluxo de eventos do caso de uso RAP05](../out/casos-de-uso/administrador/RAP05/RAP05.png)
+
+## RAP06 - Apagar local
+
+O administrador do departamento de achados e perdidos poderá excluir o local da plataforma. O sistema deve excluir também os dados e acesso e os objetos do local.
+
+### Precondição
+
+O usuário deve estar logado no sistema como um dos atores do caso de uso.
+
+### Ator
+
+Administrador departamento de achados e perdidos
+
+### Fluxo de eventos
+
+![Diagram do fluxo de eventos do caso de uso RAP06](../out/casos-de-uso/administrador/RAP06/RAP06.png)

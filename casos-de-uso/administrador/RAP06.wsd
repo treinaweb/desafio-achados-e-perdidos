@@ -1,0 +1,23 @@
+@startuml RAP06
+
+actor "Administrador departamento de achados e perdidos" as admin
+participant "Sistema" as sistema
+
+admin -> sistema: Acessa a página de alteração de dados
+sistema -> sistema: Verifica se o usuário está logado
+
+group Usuário deslogado
+  sistema -> admin: Redireciona para a página de login
+end
+
+group Usuário logado
+  sistema -> admin: Exibe o formulário de alteração de dados com a informações atuais já preenchidas e uma opção para exclusão do local
+  admin -> sistema: Seleciona a opção de exclusão do local
+  sistema -> admin: Exibe uma mensagem para confirmação de exclusão do local
+  admin -> sistema: Confirma a exclusão do local
+  sistema -> sistema: Desloga o usuário
+  sistema -> sistema: Apaga o usuário, o local e os objetos dessa local do banco de dados
+  sistema -> admin: Redireciona para a página de login
+end
+
+@enduml
