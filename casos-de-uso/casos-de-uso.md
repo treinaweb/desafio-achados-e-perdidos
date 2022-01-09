@@ -79,3 +79,19 @@ Administrador departamento de achados e perdidos
 ### Fluxo de eventos
 
 ![Diagram do fluxo de eventos do caso de uso RAP04](../out/casos-de-uso/administrador/RAP04/RAP04.png)
+
+## RAP05 - Alterar dados cadastrais
+
+O sistema deverá permitir ao administrador do departamento de achados e perdidos alterar seus dados de acesso, além dos dados do local que ele é responsável.
+
+### Precondição
+
+O usuário deve estar logado no sistema como um dos atores do caso de uso.
+
+### Ator
+
+Administrador departamento de achados e perdidos
+
+### Fluxo de eventos
+
+![Diagram do fluxo de eventos do caso de uso RAP05](../out/casos-de-uso/administrador/RAP05/RAP05.png)
