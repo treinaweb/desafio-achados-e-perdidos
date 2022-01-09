@@ -17,6 +17,7 @@
 - [Diagrama do banco de dados](#diagrama-do-banco-de-dados)
 - [Casos de uso](#casos-de-uso)
 - [Layout da aplicação](#layout-da-aplicação)
+- [Divisão das entregas](#divisão-das-entregas)
 
 ## Descrição
 
@@ -52,3 +53,12 @@ Abaixo estão os links para acessar os [wireframes](https://pt.wikipedia.org/wik
 
 - [Wireframes](https://whimsical.com/mockup-achados-e-perdidos-DsnQVGKsruoBwHHFeppvuy)
 - [Mockups](https://www.figma.com/file/9TYz0R2a9w52qsqVwovseC/Achados-e-Perdidos?node-id=0%3A1)
+
+## Divisão das entregas
+
+O desenvolvimento do sistema será dividido em quatro entregas acumulativas, cada entrega terá quais funcionalidades do sistema devem ser desenvolvidas, abaixo estão os links para ver os detalhes do quê deve ser desenvolvido em cada uma das entregas.
+
+- [Primeira entraga](./entregas/primeira-entrega.md)
+- [Segunda entraga](./entregas/segunda-entrega.md)
+- [Terceira entraga](./entregas/terceira-entrega.md)
+- [Quarta entraga](./entregas/quarta-entrega.md)
