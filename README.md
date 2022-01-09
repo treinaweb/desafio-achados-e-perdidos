@@ -39,8 +39,15 @@ A aplicação terá três tabelas que irão se relacionar entre si, sendo elas a
 
 ![Diagrama do banco de dados da aplicação Achados e Perdidos](./diagramas/banco-de-dados.png)
 
-## Casos de Uso
+## Casos de uso
 
 Abaixo pode ser encontrada uma descrição textual mais detalhada sobre cada um casos de uso exitentes na aplicação.
 
 - [Casos de Uso](./casos-de-uso/casos-de-uso.md)
+
+## Layout da aplicação
+
+Abaixo estão os links para acessar os [wireframes](https://pt.wikipedia.org/wiki/Website_wireframe) e [mockups](https://pt.wikipedia.org/wiki/Mockup) da aplicação.
+
+- [Wireframes](https://whimsical.com/mockup-achados-e-perdidos-DsnQVGKsruoBwHHFeppvuy)
+- [Mockups](https://www.figma.com/file/9TYz0R2a9w52qsqVwovseC/Achados-e-Perdidos?node-id=0%3A1)
