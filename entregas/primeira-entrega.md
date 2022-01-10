@@ -270,3 +270,22 @@ Content-Type: application/json
 ```
 
 ## Front-end
+
+Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no front-end.
+
+### Telas
+
+Para essa entrega deve ser desenvolvido duas telas do front-end, a tela de cadastro de local e a tela de login.
+
+#### Tela de Cadastro
+
+Essa tela deve conter dois formulários, um para receber os dados do local e outro para receber os dados do usuário, além disso ela também deve conter uma botão com o texto "Cadastrar-se" que ao ser clicado pelo usuário deve então validar todos os dados informados e caso estejam válidos os enviará para a api que irá então realizar o cadastro dos dados informados.
+
+![Tela de cadastro da local](../telas/tela-novo-usuario-na-plataforma.png)
+
+#### Tela de login
+
+Essa tela deve conter um formulário que irá receber os email e a senha do usuário que está tentando se logar, além disso também terá um botão com o texto "Entrar" que ao ser clicado pelo usuário irá realizar as devidas válidações dos dados e caso estejam validos irá enviar essas infromações ao back-end para que o mesmo possa então realizar o processo de autenticação.
+
+![Tela de login na aplicação](../telas/tela-realizar-login.png)
+
