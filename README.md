@@ -52,7 +52,7 @@ Abaixo pode ser encontrada uma descrição textual mais detalhada sobre cada um 
 Abaixo estão os links para acessar os [wireframes](https://pt.wikipedia.org/wiki/Website_wireframe) e [mockups](https://pt.wikipedia.org/wiki/Mockup) da aplicação.
 
 - [Wireframes](https://whimsical.com/mockup-achados-e-perdidos-DsnQVGKsruoBwHHFeppvuy)
-- [Mockups](https://www.figma.com/file/9TYz0R2a9w52qsqVwovseC/Achados-e-Perdidos?node-id=0%3A1)
+- [Mockups](https://www.figma.com/file/Ff4ghTnINeyT9vHDil0goa/Achados-e-Perdidos)
 
 ## Divisão das entregas
 
