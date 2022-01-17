@@ -16,15 +16,16 @@ Os requisitos funcionais que estão relacionados com essa entrega são:
 
 Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP01.
 
-### Back-end
+## Back-end
 
-#### Rotas
+### Rotas
 
-| Rota        | Verbo HTTP | Descrição                                                      |
-|------------ |------------|--------------------------------------------------------------- |
-| /api/locais | POST       | Rota responsável por cadastrar um novo usuário e um novo local |
+| Rota               | Verbo HTTP | Descrição                                                                     |
+|--------------------|------------|-------------------------------------------------------------------------------|
+| /api/locais        | POST       | Rota responsável por cadastrar um novo usuário e um novo local                |
+| /api/locais/imagem | POST       | Rota responsável por atualizar a imagem do local pertecente ao usuário logado |
 
-Este caso de uso é executado a partir de uma requisição `POST` para a rota `/api/locais`. No corpo da requisição deve ser enviado os dados do usuário e do local a ser cadastrado.
+### Rota /api/locais
 
 **Dados da requisição**
 
@@ -196,13 +197,82 @@ Content-Type: application/json
 }
 ```
 
-### Front-end
+### Rota /api/locais/imagem
 
-### Telas
+**Dados da requisição**
+
+| Campo        | Tipo | Exemplo |
+|--------------|------|---------|
+| imagem_local | file | -       |
+
+Regras de validação da imagem do local:
+
+- `imagem_local`: não pode ser nulo
+- `imagem_local`: deve ser uma arquivo de imagem
+
+**Dados da resposta**
+
+| Campo    | Tipo   | Exemplo                      |
+|----------|--------|------------------------------|
+| mensagem | string | Imagem definida com sucesso! |
+
+**Exemplo de requisição**
+
+```
+POST /api/locais/imagem HTTP/1.1
+Host: localhost:8080
+Content-Type: multipart/form-data
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDI0NDU4NTksImV4cCI6MTY0MjQ0OTQ1OSwibmJmIjoxNjQyNDQ1ODU5LCJqdGkiOiJJdFV1QzA5Q1VGQ0JoTDdpIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.CjMddVkovYEawKXNwuMroajTKb52R4X3dC5NvH1ClW0
+Accept: */*
+```
+
+**Exemplos de respostas**
+
+Dados válidos:
+
+```
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "message": "Imagem definida com sucesso!"
+}
+```
+
+Dados inválidos:
+
+```
+HTTP/1.1 400
+Content-Type: application/json
+
+{
+  "status": 400,
+  "code": "validation_error",
+  "message": "Erro de validação dos dados enviados",
+  "imagem_local": [
+    "O campo imagem local é obrigatório."
+  ]
+}
+```
+
+Token inválido
+
+```
+HTTP/1.1 400
+Content-Type: application/json
+
+{
+  "message": "Token inválido"
+}
+```
+
+## Front-end
+
+## Telas
 
 Para esse caso de uso a tela à ser desenvolvida é a tela de cadastro de local e usuário.
 
-#### Tela de Cadastro
+### Tela de Cadastro
 
 Essa tela deve conter dois formulários, um para receber os dados do local e outro para receber os dados do usuário, além disso ela também deve conter uma botão com o texto "Cadastrar-se" que ao ser clicado pelo usuário deve então validar todos os dados informados e caso estejam válidos os enviará para a api que irá então realizar o cadastro dos dados informados.
 
@@ -212,15 +282,18 @@ Essa tela deve conter dois formulários, um para receber os dados do local e out
 
 Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP04.
 
-### Back-end
+## Back-end
 
-#### Rotas
+## Rotas
 
-| Rota            | Verbo HTTP | Descrição                                                                       |
-|-----------------|------------|---------------------------------------------------------------------------------|
-| /api/auth/login | POST       | Rota responsável por gerar tokens de acesso a partir das credenciais do usuário |
+| Rota              | Verbo HTTP | Descrição                                                                       |
+|-------------------|------------|---------------------------------------------------------------------------------|
+| /api/auth/login   | POST       | Rota responsável por gerar tokens de acesso a partir das credenciais do usuário |
+| /api/auth/refresh | POST       | Rota responsável por gerar os tokens de acesso a partir do refresh token        |
+| /api/auth/logout  | POST       | Rota responsável por invalidar os tokens de acesso de um usuário                |
+| /api/locais       | GET        | Rota responsável por exibir os dados do usuário logado                          |
 
-Este caso de uso é executado a partir de uma requisição `POST` para a rota `/api/auth/login`. No corpo da requisição deve ser enviado as credenciais do usuário a ser autenticado.
+### Rota /api/auth/login
 
 **Dados da requisição**
 
@@ -282,17 +355,121 @@ HTTP/1.1 401
 Content-Type: application/json
 
 {
-  "error": "Unauthorized"
+  "mensagem": "Unauthorized"
 }
 ```
 
-### Front-end
+### Rota /api/auth/refresh
 
-### Telas
+**Dados da requisição**
+
+| Campo   | Tipo   | Exemplo                                                                                                                                                                                  |
+|---------|------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| refresh | string | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2FvQG1haWwuY29tIiwiZXhwIjoxNjQyMDQxMTU1LCJpYXQiOjE2NDIwNDEwMzV9.6sa7y4E5xlHzhSUS-0arc9-uCwvBIYvD9YTWYSlLKCjLNk0QXnSfn-cY9P3OAhM0l9Qx0LWB8VG0Gu1kkEhSmQ |
+
+Regras de validação:
+
+- `refresh`: não pode ser nulo
+- `refresh`: não pode ser vazio
+- `refresh`: deve ser um token válido
+
+**Dados da resposta**
+
+| Campo   | Tipo   | Exemplo                                                                                                                                                                                                                                                                                                                                                               |
+|---------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| access  | string | eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDE4MzA4NTUsImV4cCI6MTY0MTgzNDQ1NSwibmJmIjoxNjQxODMwODU1LCJqdGkiOiJqSmhkOURDTmFobXFOR0hIIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.2UnX43gzSDWOfhO5XlUFPu0DZptufMUz7AWsHQb8s7o |
+| refresh | string | eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDE4MzA4NTUsImV4cCI6MTY0MTgzNDQ1NSwibmJmIjoxNjQxODMwODU1LCJqdGkiOiJqSmhkOURDTmFobXFOR0hIIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.2UnX43gzSDWOfhO5XlUFPu0DZptufMUz7AWsHQb8s7o |
+
+**Exemplo de requisição**
+
+```
+POST /api/auth/refresh HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Accept: */*
+
+{
+  "refresh": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2FvQG1haWwuY29tIiwiZXhwIjoxNjQyMDQxMTU1LCJpYXQiOjE2NDIwNDEwMzV9.6sa7y4E5xlHzhSUS-0arc9-uCwvBIYvD9YTWYSlLKCjLNk0QXnSfn-cY9P3OAhM0l9Qx0LWB8VG0Gu1kkEhSmQ"
+}
+```
+
+**Exemplos de respostas**
+
+Dados válidos:
+
+```
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDE4MzA4NTUsImV4cCI6MTY0MTgzNDQ1NSwibmJmIjoxNjQxODMwODU1LCJqdGkiOiJqSmhkOURDTmFobXFOR0hIIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.2UnX43gzSDWOfhO5XlUFPu0DZptufMUz7AWsHQb8s7o",
+  "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDE4MzA4NTUsImV4cCI6MTY0MTgzNDQ1NSwibmJmIjoxNjQxODMwODU1LCJqdGkiOiJqSmhkOURDTmFobXFOR0hIIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.2UnX43gzSDWOfhO5XlUFPu0DZptufMUz7AWsHQb8s7o"
+}
+```
+
+Dados inválidos:
+
+```
+HTTP/1.1 401
+Content-Type: application/json
+
+{
+  "mensagem": "Unauthorized"
+}
+```
+
+### Rota /api/auth/logout
+
+**Dados da requisição**
+
+Não se aplica
+
+**Dados da resposta**
+
+| Campo    | Tipo   | Exemplo                      |
+|----------|--------|------------------------------|
+| mensagem | string | Logout realizado com sucesso |
+
+**Exemplo de requisição**
+
+```
+POST /api/auth/logout HTTP/1.1
+Host: localhost:8080
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDI0NDY3MjAsImV4cCI6MTY0MjQ1MDMyMCwibmJmIjoxNjQyNDQ2NzIwLCJqdGkiOiJhdzNmak9GNjFTT2JKNTRHIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.NweLZ_H8k2ZaCbPXh0gPvaimaGwnWszB5ypEUx-sKII
+Accept: */*
+```
+
+**Exemplos de respostas**
+
+Dados válidos:
+
+```
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "message": "Logout realizado com sucesso"
+}
+```
+
+Token inválido:
+
+```
+HTTP/1.1 401
+Content-Type: application/json
+
+{
+  "message": "Unauthenticated."
+}
+```
+
+## Front-end
+
+## Telas
 
 Para esse caso de uso a tela que deve ser desenvolvida é a tela de login.
 
-#### Tela de login
+### Tela de login
 
 Essa tela deve conter um formulário que irá receber os email e a senha do usuário que está tentando se logar, além disso também terá um botão com o texto "Entrar" que ao ser clicado pelo usuário irá realizar as devidas válidações dos dados e caso estejam validos irá enviar essas infromações ao back-end para que o mesmo possa então realizar o processo de autenticação.
 
