@@ -25,7 +25,7 @@ Abaixo você encontrará todas as informações do quê e como deve ser desenvol
 | /api/locais        | POST       | Rota responsável por cadastrar um novo usuário e um novo local                |
 | /api/locais/imagem | POST       | Rota responsável por atualizar a imagem do local pertecente ao usuário logado |
 
-### Rota /api/locais
+### Rota POST /api/locais
 
 **Dados da requisição**
 
@@ -197,7 +197,7 @@ Content-Type: application/json
 }
 ```
 
-### Rota /api/locais/imagem
+### Rota POST /api/locais/imagem
 
 **Dados da requisição**
 
@@ -258,7 +258,7 @@ Content-Type: application/json
 Token inválido
 
 ```
-HTTP/1.1 400
+HTTP/1.1 401
 Content-Type: application/json
 
 {
@@ -293,7 +293,7 @@ Abaixo você encontrará todas as informações do quê e como deve ser desenvol
 | /api/auth/logout  | POST       | Rota responsável por invalidar os tokens de acesso de um usuário                |
 | /api/locais       | GET        | Rota responsável por exibir os dados do usuário logado                          |
 
-### Rota /api/auth/login
+### Rota POST /api/auth/login
 
 **Dados da requisição**
 
@@ -359,7 +359,7 @@ Content-Type: application/json
 }
 ```
 
-### Rota /api/auth/refresh
+### Rota POST /api/auth/refresh
 
 **Dados da requisição**
 
@@ -418,7 +418,7 @@ Content-Type: application/json
 }
 ```
 
-### Rota /api/auth/logout
+### Rota POST /api/auth/logout
 
 **Dados da requisição**
 

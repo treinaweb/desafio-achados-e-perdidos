@@ -22,7 +22,7 @@ Abaixo você encontrará todas as informações do quê e como deve ser desenvol
 |-------------------|------------|---------------------------------------------------------|
 | /api/locais/busca | GET        | Rota responsável por buscar locais cadastrados por nome |
 
-### Rota /api/locais/busca
+### Rota GET /api/locais/busca
 
 **Dados da requisição**
 
@@ -80,10 +80,10 @@ Para esse caso de uso as tela à serem desenvolvidas é a tela da página incial
 
 Essa tela deve conter um campo para buscar um local por nome.
 
-![Tela de cadastro da local](../telas/tela-pagina-inicial.png)
+![Tela de página inicial](../telas/tela-pagina-inicial.png)
 
 ### Tela de busca de locais
 
 Essa tela deve exibir a lista dos locais encontrados com base no criterio de busca informado pelo usuário.
 
-![Tela de cadastro da local](../telas/tela-busca-locais.png)
+![Tela de busca de locais](../telas/tela-busca-locais.png)
