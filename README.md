@@ -30,19 +30,19 @@ Permitir que pessoas encontrem seus objetos perdidos de maneira mais fácil, al�
 
 ## Diagrama de casos de uso
 
-A aplicação possui dois atores, o dono do objeto e o administrador do departamento de achados e perdidos. O diagrama abaixo demonstra quais ações cada um dos atores pode realizar.
+A aplicação possui dois atores, o dono do objeto perdido e o administrador do departamento de achados e perdidos. O diagrama abaixo demonstra quais ações cada um dos atores pode realizar.
 
 ![Diagrama de casos de uso da aplicação Achados e Perdidos](./diagramas/casos-de-uso.png)
 
 ## Diagrama do banco de dados
 
-A aplicação terá três tabelas que irão se relacionar entre si, sendo elas as tabelas `users`, `locais` e `objetos`. No diagrama abaixo é possível ver os detalhes de cada uma dessas tabelas e como as mesmas se relacionam.
+A aplicação terá três tabelas, `users`, `locais` e `objetos`. No diagrama abaixo é possível ver os detalhes de cada uma dessas tabelas e como elas se relacionam.
 
 ![Diagrama do banco de dados da aplicação Achados e Perdidos](./diagramas/banco-de-dados.png)
 
 ## Casos de uso
 
-Abaixo pode ser encontrada uma descrição textual mais detalhada sobre cada um casos de uso exitentes na aplicação.
+Abaixo pode ser encontrada uma descrição textual detalhada sobre cada caso de uso exitente na aplicação.
 
 - [Casos de Uso](./casos-de-uso/casos-de-uso.md)
 
