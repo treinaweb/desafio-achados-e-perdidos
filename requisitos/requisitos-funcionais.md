@@ -2,14 +2,14 @@
 
 - **DOP01 - Procurar um Objeto:** O dono de um objeto perdido poderá realizar a busca. O sistema deve permitir que ele busque o local por onde passou no dia que perdeu o objeto. Se o local tiver cadastro, deve ser exibida a lista com os objetos disponíveis para retirada. Por fim, se o objeto tiver disponível, o sistema deve apresentar os contatos do departamento de achados e perdidos do local.
 
-- **RAP01 - Cadastrar local**: O administrador do departamento de achados e perdidos poderá realizar o cadastro do local na plataforma. O sistema deve permitir que ele entre com os dados do local e os dados de acesso à plataforma.
+- **RAP01 - Cadastrar local**: O administrador do departamento de achados e perdidos poderá realizar o cadastro do local na plataforma. O sistema deve permitir que ele entre com os dados do local e as informações de acesso à plataforma.
 
 - **RAP02 - Gerenciar os objetos do local**: O sistema deve permitir que o administrador do local realize o cadastro de novos objetos para serem listados na plataforma, além de permitir a alteração dos dados de um objeto existente e sua exclusão.
 
-- **RAP03 - Informar dono do objeto**: O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue o objeto não poderá mais ser exibido na plataforma.
+- **RAP03 - Informar dono do objeto**: O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue, o objeto não poderá mais ser exibido na plataforma.
 
 - **RAP04 - Realizar login**: O administrador do departamento de achados e perdidos poderá realizar login na plataforma. Após o login ele deve ser direcionado para a lista de objetos.
 
-- **RAP05 - Alterar dados cadastrais**: O sistema deverá permitir ao administrador do departamento de achados e perdidos alterar seus dados de acesso, além dos dados do local que ele é responsável.
+- **RAP05 - Alterar dados cadastrais**: O sistema deverá permitir ao administrador do departamento de achados e perdidos alterar suas informações de acesso, além dos dados do local que ele é responsável.
 
 - **RAP06 - Apagar local**: O administrador do departamento de achados e perdidos poderá excluir o local da plataforma. O sistema deve excluir também os dados e acesso e os objetos do local.
