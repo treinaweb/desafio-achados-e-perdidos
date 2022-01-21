@@ -18,7 +18,7 @@ Dono Objeto
 
 ## RAP01 - Cadastrar local
 
-O administrador do departamento de achados e perdidos poderá realizar o cadastro do local na plataforma. O sistema deve permitir que ele entre com os dados do local e os dados de acesso à plataforma.
+O administrador do departamento de achados e perdidos poderá realizar o cadastro do local na plataforma. O sistema deve permitir que ele entre com os dados do local e as informações de acesso à plataforma.
 
 ### Precondição
 
@@ -50,7 +50,7 @@ Administrador departamento de achados e perdidos
 
 ## RAP03 - Informar dono do objeto
 
-O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue o objeto não poderá mais ser exibido na plataforma.
+O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue, o objeto não poderá mais ser exibido na plataforma.
 
 ### Precondição
 
@@ -82,7 +82,7 @@ Administrador departamento de achados e perdidos
 
 ## RAP05 - Alterar dados cadastrais
 
-O sistema deverá permitir ao administrador do departamento de achados e perdidos alterar seus dados de acesso, além dos dados do local que ele é responsável.
+O sistema deverá permitir ao administrador do departamento de achados e perdidos alterar suas informações de acesso, além dos dados do local que ele é responsável.
 
 ### Precondição
 
