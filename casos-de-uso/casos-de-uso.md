@@ -80,9 +80,9 @@ Administrador departamento de achados e perdidos
 
 ![Diagram do fluxo de eventos do caso de uso RAP04](../out/casos-de-uso/administrador/RAP04/RAP04.png)
 
-## RAP05 - Informar dono do objeto
+## RAP05 - Excluir objeto
 
-O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue, o objeto não poderá mais ser exibido na plataforma.
+O administrador do departamento de achados e perdidos poderá realizar a exclusão de um objeto previamente cadastrado para o local.
 
 ### Precondição
 
@@ -96,7 +96,23 @@ Administrador departamento de achados e perdidos
 
 ![Diagram do fluxo de eventos do caso de uso RAP05](../out/casos-de-uso/administrador/RAP05/RAP05.png)
 
-## RAP06 - Realizar login
+## RAP06 - Informar dono do objeto
+
+O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue, o objeto não poderá mais ser exibido na plataforma.
+
+### Precondição
+
+O usuário deve estar logado no sistema como um dos atores do caso de uso.
+
+### Ator
+
+Administrador departamento de achados e perdidos
+
+### Fluxo de eventos
+
+![Diagram do fluxo de eventos do caso de uso RAP06](../out/casos-de-uso/administrador/RAP06/RAP06.png)
+
+## RAP07 - Realizar login
 
 O administrador do departamento de achados e perdidos poderá realizar login na plataforma. Após o login ele deve ser direcionado para a lista de objetos.
 
@@ -110,9 +126,9 @@ Administrador departamento de achados e perdidos
 
 ### Fluxo de eventos
 
-![Diagram do fluxo de eventos do caso de uso RAP06](../out/casos-de-uso/administrador/RAP06/RAP06.png)
+![Diagram do fluxo de eventos do caso de uso RAP07](../out/casos-de-uso/administrador/RAP07/RAP07.png)
 
-## RAP07 - Alterar dados cadastrais
+## RAP08 - Alterar dados cadastrais
 
 O sistema deverá permitir ao administrador do departamento de achados e perdidos alterar suas informações de acesso, além dos dados do local que ele é responsável.
 
@@ -126,9 +142,9 @@ Administrador departamento de achados e perdidos
 
 ### Fluxo de eventos
 
-![Diagram do fluxo de eventos do caso de uso RAP07](../out/casos-de-uso/administrador/RAP07/RAP07.png)
+![Diagram do fluxo de eventos do caso de uso RAP08](../out/casos-de-uso/administrador/RAP08/RAP08.png)
 
-## RAP08 - Apagar local
+## RAP09 - Apagar local
 
 O administrador do departamento de achados e perdidos poderá excluir o local da plataforma. O sistema deve excluir também os dados e acesso e os objetos do local.
 
@@ -142,4 +158,4 @@ Administrador departamento de achados e perdidos
 
 ### Fluxo de eventos
 
-![Diagram do fluxo de eventos do caso de uso RAP08](../out/casos-de-uso/administrador/RAP08/RAP08.png)
+![Diagram do fluxo de eventos do caso de uso RAP09](../out/casos-de-uso/administrador/RAP09/RAP09.png)

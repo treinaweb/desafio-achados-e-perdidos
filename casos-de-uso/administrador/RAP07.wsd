@@ -3,26 +3,18 @@
 actor "Administrador departamento de achados e perdidos" as admin
 participant "Sistema" as sistema
 
-admin -> sistema: Acessa a página de alteração de dados
-sistema -> sistema: Verifica se o usuário está logado
+admin -> sistema: Acessa a página de login
+sistema -> admin: Exibe o formulário de login
+admin -> sistema: Preenche e submete o formulário
+sistema -> sistema: Válida os dados submetidos
 
-group Usuário deslogado
-  sistema -> admin: Redireciona para a página de login
+group Dados inválidos
+  sistema -> admin: Exibe os erros de válidação
 end
 
-group Usuário logado
-  sistema -> admin: Exibe o formulário de alteração de dados com a informações atuais já preenchidas
-  admin -> sistema: Altera e submete o formulário de alteração de dados
-  sistema -> sistema: Válida os dados submetidos
-
-  group Dados válidos
-    sistema -> admin: Exibe os erros de válidação
-  end
-
-  group Dados inválidos
-    sistema -> sistema: Altera os dados do usuário e do local no banco de dados
-    sistema -> admin: Exibe uma mensagem que os dados foram alterados com sucesso
-  end
+group Dados válidos
+  sistema -> sistema: Autentica o usuário no sistema
+  sistema -> admin: Redireciona para a página de gerenciamento de objetos
 end
 
 @enduml

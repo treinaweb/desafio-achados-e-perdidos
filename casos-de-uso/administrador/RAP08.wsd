@@ -11,13 +11,18 @@ group Usuário deslogado
 end
 
 group Usuário logado
-  sistema -> admin: Exibe o formulário de alteração de dados com a informações atuais já preenchidas e uma opção para exclusão do local
-  admin -> sistema: Seleciona a opção de exclusão do local
-  sistema -> admin: Exibe uma mensagem para confirmação de exclusão do local
-  admin -> sistema: Confirma a exclusão do local
-  sistema -> sistema: Desloga o usuário
-  sistema -> sistema: Apaga o usuário, o local e os objetos dessa local do banco de dados
-  sistema -> admin: Redireciona para a página de login
+  sistema -> admin: Exibe o formulário de alteração de dados com a informações atuais já preenchidas
+  admin -> sistema: Altera e submete o formulário de alteração de dados
+  sistema -> sistema: Válida os dados submetidos
+
+  group Dados válidos
+    sistema -> admin: Exibe os erros de válidação
+  end
+
+  group Dados inválidos
+    sistema -> sistema: Altera os dados do usuário e do local no banco de dados
+    sistema -> admin: Exibe uma mensagem que os dados foram alterados com sucesso
+  end
 end
 
 @enduml

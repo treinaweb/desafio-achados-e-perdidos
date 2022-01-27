@@ -10,12 +10,12 @@
 
 - **RAP04 - Editar informações do objeto**: O administrador do departamento de achados e perdidos poderá realizar a edição das informações de um objeto previamente cadastrado para o local.
 
-- **RAP04 - Excluir objeto**: O administrador do departamento de achados e perdidos poderá realizar a exclusão de um objeto previamente cadastrado para o local.
+- **RAP05 - Excluir objeto**: O administrador do departamento de achados e perdidos poderá realizar a exclusão de um objeto previamente cadastrado para o local.
 
-- **RAP05 - Informar dono do objeto**: O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue, o objeto não poderá mais ser exibido na plataforma.
+- **RAP06 - Informar dono do objeto**: O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue, o objeto não poderá mais ser exibido na plataforma.
 
-- **RAP06 - Realizar login**: O administrador do departamento de achados e perdidos poderá realizar login na plataforma. Após o login ele deve ser direcionado para a lista de objetos.
+- **RAP07 - Realizar login**: O administrador do departamento de achados e perdidos poderá realizar login na plataforma. Após o login ele deve ser direcionado para a lista de objetos.
 
-- **RAP07 - Alterar dados cadastrais**: O sistema deverá permitir ao administrador do departamento de achados e perdidos alterar suas informações de acesso, além dos dados do local que ele é responsável.
+- **RAP08 - Alterar dados cadastrais**: O sistema deverá permitir ao administrador do departamento de achados e perdidos alterar suas informações de acesso, além dos dados do local que ele é responsável.
 
-- **RAP08 - Apagar local**: O administrador do departamento de achados e perdidos poderá excluir o local da plataforma. O sistema deve excluir também os dados e acesso e os objetos do local.
+- **RAP09 - Apagar local**: O administrador do departamento de achados e perdidos poderá excluir o local da plataforma. O sistema deve excluir também os dados e acesso e os objetos do local.

@@ -3,18 +3,29 @@
 actor "Administrador departamento de achados e perdidos" as admin
 participant "Sistema" as sistema
 
-admin -> sistema: Acessa a página de login
-sistema -> admin: Exibe o formulário de login
-admin -> sistema: Preenche e submete o formulário
-sistema -> sistema: Válida os dados submetidos
+admin -> sistema: Acessa a página de gerenciamento de objetos
+sistema -> sistema: Verifica se o usuário está logado
 
-group Dados inválidos
-  sistema -> admin: Exibe os erros de válidação
+group Usuário deslogado
+  sistema -> admin: Redireciona para a página de login
 end
 
-group Dados válidos
-  sistema -> sistema: Autentica o usuário no sistema
-  sistema -> admin: Redireciona para a página de gerenciamento de objetos
+group Usuário logado
+  sistema -> admin: Exibe a lista de objetos cadastrados com as opções para edição e exclusão e uma opção de cadastrar objeto
+  admin -> sistema: Seleciona a opção "Informar Entrega"
+  sistema -> admin: Exibe o formulário de informe da entrega
+  admin -> sistema: Preenche e submete o formulário de informe da entrega
+  sistema -> sistema: Válida os dados enviados
+
+  group Dados inválidos
+    sistema -> admin: Exibe os erros de válidação
+  end
+
+  group Dados válidos
+    sistema -> sistema: Atualiza o objeto no banco de dados
+    sistema -> admin: Exibe uma mensagem informando que o objeto foi marcado como devolvido
+    sistema -> admin: Redireciona para a página de gerenciamento de objetos
+  end
 end
 
 @enduml
