@@ -32,9 +32,9 @@ Administrador departamento de achados e perdidos
 
 ![Diagram do fluxo de eventos do caso de uso RAP01](../out/casos-de-uso/administrador/RAP01/RAP01.png)
 
-## RAP02 - Gerenciar os objetos do local
+## RAP02 - Listar objetos do local
 
-O sistema deve permitir que o administrador do local realize o cadastro de novos objetos para serem listados na plataforma, além de permitir a alteração dos dados de um objeto existente e sua exclusão.
+O administrador do departamento de achados e perdidos poderá realizar a listagem dos objetos cadastrados para o local.
 
 ### Precondição
 
