@@ -4,7 +4,13 @@
 
 - **RAP01 - Cadastrar local**: O administrador do departamento de achados e perdidos poderá realizar o cadastro do local na plataforma. O sistema deve permitir que ele entre com os dados do local e as informações de acesso à plataforma.
 
-- **RAP02 - Gerenciar os objetos do local**: O sistema deve permitir que o administrador do local realize o cadastro de novos objetos para serem listados na plataforma, além de permitir a alteração dos dados de um objeto existente e sua exclusão.
+- **RAP02 - Listar objetos do local**: O administrador do departamento de achados e perdidos poderá realizar a listagem dos objetos cadastrados para o local.
+
+- **RAP03 - Cadastrar objeto para o local**: O administrador do departamento de achados e perdidos poderá realizar o cadastro de um objeto para o local.
+
+- **RAP04 - Editar informações do objeto**: O administrador do departamento de achados e perdidos poderá realizar a edição das informações de um objeto previamente cadastrado para o local.
+
+- **RAP04 - Excluir objeto**: O administrador do departamento de achados e perdidos poderá realizar a exclusão de um objeto previamente cadastrado para o local.
 
 - **RAP03 - Informar dono do objeto**: O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue, o objeto não poderá mais ser exibido na plataforma.
 
