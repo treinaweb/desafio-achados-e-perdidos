@@ -8,13 +8,13 @@ Durante essa entrega você terá que desenvolver as rotas e telas referentes as 
 
 Os requisitos funcionais que estão relacionados com essa entrega são:
 
-- **RAP03 - Informar dono do objeto**: O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue o objeto não poderá mais ser exibido na plataforma.
+- **RAP06 - Informar dono do objeto**: O administrador do departamento de achados e perdidos deverá informar a entrega de um objeto ao dono. O sistema deverá solicitar o nome e CPF do dono. Após definido como entregue o objeto não poderá mais ser exibido na plataforma.
 
-- **RAP05 - Alterar dados cadastrais**: O sistema deverá permitir ao administrador do departamento de achados e perdidos alterar seus dados de acesso, além dos dados do local que ele é responsável.
+- **RAP08 - Alterar dados cadastrais**: O sistema deverá permitir ao administrador do departamento de achados e perdidos alterar seus dados de acesso, além dos dados do local que ele é responsável.
 
-- **RAP06 - Apagar local**: O administrador do departamento de achados e perdidos poderá excluir o local da plataforma. O sistema deve excluir também os dados e acesso e os objetos do local.
+- **RAP09 - Apagar local**: O administrador do departamento de achados e perdidos poderá excluir o local da plataforma. O sistema deve excluir também os dados e acesso e os objetos do local.
 
-## RAP03 - Informar dono do objeto
+## RAP06 - Informar dono do objeto
 
 Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP03.
 
@@ -131,7 +131,7 @@ Essa tela deve conter um formulário para que o usuário possa informar os dados
 
 ![Tela de informar dono do objeto](../telas/tela-informar-dono-objeto.png)
 
-## RAP05 - Alterar dados cadastrais
+## RAP08 - Alterar dados cadastrais
 
 Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP05.
 
@@ -335,7 +335,7 @@ Essa tela deve conter dois formulários, um para receber os dados do local e out
 
 ![Tela de informar dono do objeto](../telas/tela-alterar-dados-local-usuario.png)
 
-## RAP06 - Apagar local
+## RAP09 - Apagar local
 
 Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP06.
 
