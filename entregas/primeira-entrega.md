@@ -10,7 +10,7 @@ Os requisitos funcionais que estão relacionados com essa entrega são:
 
 - **RAP01 - Cadastrar local**: O administrador do departamento de achados e perdidos poderá realizar o cadastro do local na plataforma. O sistema deve permitir que ele entre com os dados do local e os dados de acesso à plataforma.
 
-- **RAP04 - Realizar login**: O administrador do departamento de achados e perdidos poderá realizar login na plataforma. Após o login ele deve ser direcionado para a lista de objetos.
+- **RAP07 - Realizar login**: O administrador do departamento de achados e perdidos poderá realizar login na plataforma. Após o login ele deve ser direcionado para a lista de objetos.
 
 ## RAP01 - Cadastrar local
 
@@ -278,7 +278,7 @@ Essa tela deve conter dois formulários, um para receber os dados do local e out
 
 ![Tela de cadastro da local](../telas/tela-novo-usuario-na-plataforma.png)
 
-## RAP04 - Realizar login
+## RAP07 - Realizar login
 
 Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP04.
 
