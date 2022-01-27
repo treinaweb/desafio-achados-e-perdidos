@@ -12,18 +12,18 @@ end
 
 group Usuário logado
   sistema -> admin: Exibe a lista de objetos cadastrados com as opções para edição e exclusão e uma opção de cadastrar objeto
-  admin -> sistema: Seleciona a opção "Informar Entrega"
-  sistema -> admin: Exibe o formulário de informe da entrega
-  admin -> sistema: Preenche e submete o formulário de informe da entrega
-  sistema -> sistema: Válida os dados enviados
+  admin -> sistema: Seleciona a opção "Adicionar Objeto"
+  sistema -> admin: Exibe o formulário de cadastro de objeto
+  admin -> sistema: Preenche e submete os formulário
+  sistema -> sistema: Válida os dados submetidos
 
   group Dados inválidos
-    sistema -> admin: Exibe os erros de válidação
+    sistema -> admin: Exibe os erros de validação
   end
 
   group Dados válidos
-    sistema -> sistema: Atualiza o objeto no banco de dados
-    sistema -> admin: Exibe uma mensagem informando que o objeto foi marcado como devolvido
+    sistema -> sistema: Cadastra o objeto no banco de dados
+    sistema -> admin: Exibe uma mensagem informando que o objeto foi cadastrado com sucesso
     sistema -> admin: Redireciona para a página de gerenciamento de objetos
   end
 end
