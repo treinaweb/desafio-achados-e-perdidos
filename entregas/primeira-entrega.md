@@ -280,7 +280,7 @@ Essa tela deve conter dois formulários, um para receber os dados do local e out
 
 ## RAP07 - Realizar login
 
-Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP04.
+Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP07.
 
 ## Back-end
 

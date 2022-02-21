@@ -16,7 +16,7 @@ Os requisitos funcionais que estão relacionados com essa entrega são:
 
 ## RAP06 - Informar dono do objeto
 
-Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP03.
+Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP06.
 
 ## Back-end
 
@@ -133,7 +133,7 @@ Essa tela deve conter um formulário para que o usuário possa informar os dados
 
 ## RAP08 - Alterar dados cadastrais
 
-Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP05.
+Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP08.
 
 ## Back-end
 
@@ -337,7 +337,7 @@ Essa tela deve conter dois formulários, um para receber os dados do local e out
 
 ## RAP09 - Apagar local
 
-Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP06.
+Abaixo você encontrará todas as informações do quê e como deve ser desenvolvido no back-end e no front-end para o caso de uso RAP09.
 
 ## Back-end
 
