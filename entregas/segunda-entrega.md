@@ -18,9 +18,10 @@ Abaixo você encontrará todas as informações do quê e como deve ser desenvol
 
 ### Rotas
 
-| Rota              | Verbo HTTP | Descrição                                               |
-|-------------------|------------|---------------------------------------------------------|
-| /api/locais/busca | GET        | Rota responsável por buscar locais cadastrados por nome |
+| Rota                          | Verbo HTTP | Descrição                                                      |
+|-------------------------------|------------|----------------------------------------------------------------|
+| /api/locais/busca             | GET        | Rota responsável por buscar locais cadastrados por nome        |
+| /api/locais/{localId}/objetos | GET        | Rota responsável por listar os objetos cadastrados de um local |
 
 ### Rota GET /api/locais/busca
 
@@ -80,11 +81,58 @@ Content-Type: application/json
 ]
 ```
 
+### Rota GET /api/locais/{localId}/objetos
+
+**Dados da requisição**
+
+Não se aplica
+
+**Dados da resposta**
+
+Dados do objeto
+
+Dados do objeto
+
+| Campo         | Tipo     | Exemplo                                                                    |
+|---------------|----------|----------------------------------------------------------------------------|
+| id            | int      | 1                                                                          |
+| nome          | string   | Guarda Chuva                                                               |
+| descricao     | string   | Cor preta                                                                  |
+| entregue      | boolean  | false                                                                      |
+| data_cadastro | string   | 2022-01-01                                                                 |
+| imagem        | string   | http://localhost:8080/imagens/yXNmbLqtqgIaMyVyhQGDCZuIJMwSQ5UQMV6ystLs.png |
+
+**Exemplo de requisição**
+
+```
+GET /api/locais/1/objetos HTTP/1.1
+Host: localhost:8080
+Accept: */*
+```
+
+**Exemplos de respostas**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "nome": "Guarda Chuva",
+    "descricao": "Cor preta",
+    "entregue": false,
+    "data_cadastro": "2022-01-01",
+    "imagem": "http://localhost:8080/imagens/yXNmbLqtqgIaMyVyhQGDCZuIJMwSQ5UQMV6ystLs.png",
+  }
+]
+```
+
 ## Front-end
 
 ## Telas
 
-Para esse caso de uso as tela à serem desenvolvidas é a tela da página incial e a tela de busca de locais.
+Para esse caso de uso as tela à serem desenvolvidas é a tela da página incial, a tela de busca de locais e a tela de listagem de objetos por local.
 
 ### Tela da página inicial
 
@@ -97,3 +145,9 @@ Essa tela deve conter um campo para buscar um local por nome.
 Essa tela deve exibir a lista dos locais encontrados com base no criterio de busca informado pelo usuário.
 
 ![Tela de busca de locais](../telas/tela-busca-locais.png)
+
+### Tela de listagem de objetos por local
+
+Essa tela deve exibir a lista de objetos cadastrados para um local especifico.
+
+![Tela de listagem de objetos por local](../telas/tela-lista-de-objetos-por-local.png)
