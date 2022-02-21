@@ -53,21 +53,23 @@ Accept: */*
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-{
-  "id": 1,
-  "nome": "Padaria do Sabor",
-  "endereco": "av jardim japao, 98 - Centro - SBC",
-  "contato": "Whats: 11 99712-3550",
-  "descricao": "padaria do bairro",
-  "imagem": null,
-  "links": [
-    {
-      "type": "GET",
-      "rel": "objetos_local",
-      "uri": "/api/locais/1/objetos"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "nome": "Padaria do Sabor",
+    "endereco": "av jardim japao, 98 - Centro - SBC",
+    "contato": "Whats: 11 99712-3550",
+    "descricao": "padaria do bairro",
+    "imagem": null,
+    "links": [
+      {
+        "type": "GET",
+        "rel": "objetos_local",
+        "uri": "/api/locais/1/objetos"
+      }
+    ]
+  }
+]
 ```
 
 ## Front-end
