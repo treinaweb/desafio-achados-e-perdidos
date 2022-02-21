@@ -35,7 +35,7 @@ Não se aplica
 | id        | int     | 1                                                                          |
 | nome      | string  | Padaria do Sabor                                                           |
 | endereco  | string  | av jardim japao, 98 - Centro - SBC                                         |
-| contato   | string  | Whats: 11981961078                                                         |
+| contato   | string  | Whats: 11 99712-3550                                                       |
 | descricao | string  | Padaria do bairro                                                          |
 | imagem    | string  | http://localhost:8080/imagens/yXNmbLqtqgIaMyVyhQGDCZuIJMwSQ5UQMV6ystLs.png |                  |
 
@@ -57,7 +57,7 @@ Content-Type: application/json
   "id": 1,
   "nome": "Padaria do Sabor",
   "endereco": "av jardim japao, 98 - Centro - SBC",
-  "contato": "Whats: 11981961078",
+  "contato": "Whats: 11 99712-3550",
   "descricao": "padaria do bairro",
   "imagem": null,
   "links": [
