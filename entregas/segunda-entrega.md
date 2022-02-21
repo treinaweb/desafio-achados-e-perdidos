@@ -26,7 +26,7 @@ Abaixo você encontrará todas as informações do quê e como deve ser desenvol
 
 **Dados da requisição**
 
-Não se aplica
+Na rota deve ser enviado uma query string chamada `nome` do tipo string contendo o valor da busca.
 
 **Dados da resposta**
 
