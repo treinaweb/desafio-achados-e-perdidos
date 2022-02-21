@@ -30,6 +30,8 @@ Na rota deve ser enviado uma query string chamada `nome` do tipo string contendo
 
 **Dados da resposta**
 
+Dados do local
+
 | Campo     | Tipo    | Exemplo                                                                    |
 |-----------|---------|----------------------------------------------------------------------------|
 | id        | int     | 1                                                                          |
@@ -38,6 +40,12 @@ Na rota deve ser enviado uma query string chamada `nome` do tipo string contendo
 | contato   | string  | Whats: 11 99712-3550                                                       |
 | descricao | string  | Padaria do bairro                                                          |
 | imagem    | string  | http://localhost:8080/imagens/yXNmbLqtqgIaMyVyhQGDCZuIJMwSQ5UQMV6ystLs.png |                  |
+
+Hateoas do local
+
+| Type          | Rel           | Uri                            |
+|---------------|---------------|--------------------------------|
+| GET           | objetos_local | /api/locais/{objetoId}/objetos |
 
 **Exemplo de requisição**
 

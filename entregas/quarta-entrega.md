@@ -211,7 +211,7 @@ Regras de validação do usuário:
 
 **Dados da resposta**
 
-Dados do local:
+Dados do Local:
 
 | Campo     | Tipo    | Exemplo                                                                    |
 |-----------|---------|----------------------------------------------------------------------------|
@@ -222,6 +222,17 @@ Dados do local:
 | descricao | string  | Padaria do bairro                                                          |
 | imagem    | string  | http://localhost:8080/imagens/yXNmbLqtqgIaMyVyhQGDCZuIJMwSQ5UQMV6ystLs.png |                  |
 | usuario   | Usuario | -                                                                          |
+
+Hateoas do Local
+
+| Type          | Rel                    | Uri                |
+|---------------|------------------------|--------------------|
+| GET           | self                   | /api/locais        |
+| PUT           | atualizar_local        | /api/locais        |
+| DELETE        | apagar_local           | /api/locais        |
+| POST          | definir_imagem_local   | /api/locais/imagem |
+| GET           | listar_objetos_local   | /api/objetos       |
+| POST          | adicionar_objeto_local | /api/objetos       |
 
 Dados do usuário:
 

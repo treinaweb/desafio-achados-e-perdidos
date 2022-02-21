@@ -42,6 +42,8 @@ Não se aplica
 
 **Dados da resposta**
 
+Dados do objeto
+
 | Campo         | Tipo     | Exemplo                                                                    |
 |---------------|----------|----------------------------------------------------------------------------|
 | id            | int      | 1                                                                          |
@@ -50,6 +52,16 @@ Não se aplica
 | entregue      | boolean  | false                                                                      |
 | data_cadastro | string   | 2022-01-01                                                                 |
 | imagem        | string   | http://localhost:8080/imagens/yXNmbLqtqgIaMyVyhQGDCZuIJMwSQ5UQMV6ystLs.png |
+
+Hateoas do Objeto
+
+| Type   | Rel                   | Uri                            |
+|------- |-----------------------|--------------------------------|
+| GET    | self                  | /api/objetos/{objetoId}        |
+| PUT    | atualizar_objeto      | /api/objetos/{objetoId}        |
+| DELETE | apagar_objeto         | /api/objetos/{objetoId}        |
+| POST   | definir_imagem_objeto | /api/objetos/{objetoId}/imagem |
+| PATCH  | definir_dono_objeto   | /api/objetos/{objetoId}/donos  |
 
 **Exemplo de requisição**
 
@@ -170,6 +182,8 @@ Regras de validação do objeto:
 
 **Dados da resposta**
 
+Dados do Objeto
+
 | Campo         | Tipo    | Exemplo                                                                    |
 |---------------|-------- |----------------------------------------------------------------------------|
 | id            | int     | 1                                                                          |
@@ -178,6 +192,16 @@ Regras de validação do objeto:
 | entregue      | boolean | false                                                                      |
 | data_cadastro | string  | 2022-01-01                                                                 |
 | imagem        | string  | http://localhost:8080/imagens/yXNmbLqtqgIaMyVyhQGDCZuIJMwSQ5UQMV6ystLs.png |
+
+Hateos do Objeto
+
+| Type   | Rel                   | Uri                            |
+|------- |-----------------------|--------------------------------|
+| GET    | self                  | /api/objetos/{objetoId}        |
+| PUT    | atualizar_objeto      | /api/objetos/{objetoId}        |
+| DELETE | apagar_objeto         | /api/objetos/{objetoId}        |
+| POST   | definir_imagem_objeto | /api/objetos/{objetoId}/imagem |
+| PATCH  | definir_dono_objeto   | /api/objetos/{objetoId}/donos  |
 
 **Exemplo de requisição**
 
@@ -304,6 +328,8 @@ Não se aplica
 
 **Dados da resposta**
 
+Dados do Objeto
+
 | Campo         | Tipo    | Exemplo                                                                    |
 |---------------|-------- |----------------------------------------------------------------------------|
 | id            | int     | 1                                                                          |
@@ -312,6 +338,16 @@ Não se aplica
 | entregue      | boolean | false                                                                      |
 | data_cadastro | string  | 2022-01-01                                                                 |
 | imagem        | string  | http://localhost:8080/imagens/yXNmbLqtqgIaMyVyhQGDCZuIJMwSQ5UQMV6ystLs.png |
+
+Hateoas do Objeto
+
+| Type   | Rel                   | Uri                            |
+|------- |-----------------------|--------------------------------|
+| GET    | self                  | /api/objetos/{objetoId}        |
+| PUT    | atualizar_objeto      | /api/objetos/{objetoId}        |
+| DELETE | apagar_objeto         | /api/objetos/{objetoId}        |
+| POST   | definir_imagem_objeto | /api/objetos/{objetoId}/imagem |
+| PATCH  | definir_dono_objeto   | /api/objetos/{objetoId}/donos  |
 
 **Exemplo de requisição**
 
@@ -433,6 +469,8 @@ Regras de validação do objeto:
 
 **Dados da resposta**
 
+Dados do Objeto
+
 | Campo         | Tipo    | Exemplo                                                                    |
 |---------------|-------- |----------------------------------------------------------------------------|
 | id            | int     | 1                                                                          |
@@ -441,6 +479,16 @@ Regras de validação do objeto:
 | entregue      | boolean | false                                                                      |
 | data_cadastro | string  | 2022-01-01                                                                 |
 | imagem        | string  | http://localhost:8080/imagens/yXNmbLqtqgIaMyVyhQGDCZuIJMwSQ5UQMV6ystLs.png |
+
+Hateoas do Objeto
+
+| Type   | Rel                   | Uri                            |
+|------- |-----------------------|--------------------------------|
+| GET    | self                  | /api/objetos/{objetoId}        |
+| PUT    | atualizar_objeto      | /api/objetos/{objetoId}        |
+| DELETE | apagar_objeto         | /api/objetos/{objetoId}        |
+| POST   | definir_imagem_objeto | /api/objetos/{objetoId}/imagem |
+| PATCH  | definir_dono_objeto   | /api/objetos/{objetoId}/donos  |
 
 **Exemplo de requisição**
 
