@@ -27,7 +27,11 @@ Abaixo você encontrará todas as informações do quê e como deve ser desenvol
 
 ### Rota POST /api/locais
 
-**Dados da requisição**
+**Dados no cabeçalho da requisição**
+
+Não se aplica
+
+**Dados no corpo da requisição**
 
 Dados do local:
 
@@ -83,7 +87,7 @@ Regras de validação do usuário:
 - `password_confirmation`: não pode ser vazio
 - `password_confirmation`: deve ser igual ao campo `password`
 
-**Dados da resposta**
+**Dados no corpo da resposta**
 
 Dados do local:
 
@@ -199,7 +203,13 @@ Content-Type: application/json
 
 ### Rota POST /api/locais/imagem
 
-**Dados da requisição**
+**Dados no cabeçalho da requisição**
+
+| Chave         | Tipo   | Exemplo                                                                                                                                                                                                                                                                                                                                                                      |
+|---------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Authorization | string | Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDI0NDU4NTksImV4cCI6MTY0MjQ0OTQ1OSwibmJmIjoxNjQyNDQ1ODU5LCJqdGkiOiJJdFV1QzA5Q1VGQ0JoTDdpIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.CjMddVkovYEawKXNwuMroajTKb52R4X3dC5NvH1ClW0 |
+
+**Dados no corpo da requisição**
 
 | Campo        | Tipo | Exemplo |
 |--------------|------|---------|
@@ -295,7 +305,11 @@ Abaixo você encontrará todas as informações do quê e como deve ser desenvol
 
 ### Rota POST /api/auth/login
 
-**Dados da requisição**
+**Dados no cabeçalho da requisição**
+
+Não se aplica
+
+**Dados no corpo da requisição**
 
 | Campo    | Tipo    | Exemplo       |
 |----------|---------|---------------|
@@ -361,7 +375,11 @@ Content-Type: application/json
 
 ### Rota POST /api/auth/refresh
 
-**Dados da requisição**
+**Dados no cabeçalho da requisição**
+
+Não se aplica
+
+**Dados no corpo da requisição**
 
 | Campo   | Tipo   | Exemplo                                                                                                                                                                                  |
 |---------|------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
