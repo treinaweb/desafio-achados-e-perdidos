@@ -492,6 +492,128 @@ Content-Type: application/json
 }
 ```
 
+### Rota GET /api/locais
+
+**Dados no cabeçalho da requisição**
+
+| Chave         | Tipo   | Exemplo                                                                                                                                                                                                                                                                                                                                                                      |
+|---------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Authorization | string | Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDI0NDU4NTksImV4cCI6MTY0MjQ0OTQ1OSwibmJmIjoxNjQyNDQ1ODU5LCJqdGkiOiJJdFV1QzA5Q1VGQ0JoTDdpIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.CjMddVkovYEawKXNwuMroajTKb52R4X3dC5NvH1ClW0 |
+
+**Dados no corpo requisição**
+
+Não se aplica
+
+**Dados no corpo da resposta**
+
+Dados do local:
+
+| Campo     | Tipo    | Exemplo                                                                    |
+|-----------|---------|----------------------------------------------------------------------------|
+| id        | int     | 1                                                                          |
+| nome      | string  | Padaria do Sabor                                                           |
+| endereco  | string  | av jardim japao, 98 - Centro - SBC                                         |
+| contato   | string  | Whats: 11 99712-3550                                                       |
+| descricao | string  | Padaria do bairro                                                          |
+| imagem    | string  | http://localhost:8080/imagens/yXNmbLqtqgIaMyVyhQGDCZuIJMwSQ5UQMV6ystLs.png |                  |
+| usuario   | Usuario | -                                                                          |
+
+Hateoas do local:
+
+| Type          | Rel                    | Uri                |
+|---------------|------------------------|--------------------|
+| GET           | self                   | /api/locais        |
+| PUT           | atualizar_local        | /api/locais        |
+| DELETE        | apagar_local           | /api/locais        |
+| POST          | definir_imagem_local   | /api/locais/imagem |
+| GET           | listar_objetos_local   | /api/objetos       |
+| POST          | adicionar_objeto_local | /api/objetos       |
+
+Dados do usuário:
+
+| Campo                 | Tipo   | Exemplo       |
+|-----------------------|--------|---------------|
+| nome                  | srting | João da Silva |
+| email                 | srting | joao@mail.com |
+
+**Exemplo de requisição**
+
+```
+POST /api/locais HTTP/1.1
+Host: localhost:8080
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDI0NDY3MjAsImV4cCI6MTY0MjQ1MDMyMCwibmJmIjoxNjQyNDQ2NzIwLCJqdGkiOiJhdzNmak9GNjFTT2JKNTRHIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.NweLZ_H8k2ZaCbPXh0gPvaimaGwnWszB5ypEUx-sKII
+Accept: */*
+```
+
+**Exemplos de respostas**
+
+Dados válidos:
+
+```
+HTTP/1.1 200
+Content-Type: application/json
+
+HTTP/1.1 201
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nome": "Padaria do Sabor",
+  "endereco": "av jardim japao, 98 - Centro - SBC",
+  "contato": "Whats: 11 99712-3550",
+  "descricao": "padaria do bairro",
+  "imagem": null,
+  "usuario": {
+    "id": 1,
+    "nome": "João da Silva",
+    "email": "joao@mail.com"
+  },
+  "links": [
+    {
+      "type": "GET",
+      "rel": "self",
+      "uri": "/api/locais"
+    },
+    {
+      "type": "PUT",
+      "rel": "atualizar_local",
+      "uri": "/api/locais"
+    },
+    {
+      "type": "DELETE",
+      "rel": "apagar_local",
+      "uri": "/api/locais"
+    },
+    {
+      "type": "POST",
+      "rel": "definir_imagem_local",
+      "uri": "/api/locais/imagem"
+    },
+    {
+      "type": "GET",
+      "rel": "listar_objetos_local",
+      "uri": "/api/objetos"
+    },
+    {
+      "type": "POST",
+      "rel": "adicionar_objeto_local",
+      "uri": "/api/objetos"
+    }
+  ]
+}
+```
+
+Token inválido:
+
+```
+HTTP/1.1 401
+Content-Type: application/json
+
+{
+  "message": "Unauthenticated."
+}
+```
+
 ## Front-end
 
 ## Telas
