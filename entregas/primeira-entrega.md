@@ -64,10 +64,10 @@ Dados do usuário:
 
 | Campo                 | Tipo   | Exemplo       |
 |-----------------------|--------|---------------|
-| nome                  | srting | João da Silva |
-| email                 | srting | joao@mail.com |
-| passaword             | srting | senha@123     |
-| password_confirmation | srting | senha@123     |
+| nome                  | string | João da Silva |
+| email                 | string | joao@mail.com |
+| passaword             | string | senha@123     |
+| password_confirmation | string | senha@123     |
 
 Regras de validação do usuário:
 
