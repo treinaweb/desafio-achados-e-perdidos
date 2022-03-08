@@ -403,22 +403,6 @@ Content-Type: application/json
 }
 ```
 
-Dados inválidos
-
-```
-HTTP/1.1 400
-Content-Type: application/json
-
-{
-  "status": 400,
-  "code": "validation_error",
-  "message": "Erro de validação dos dados enviados",
-  "nome": [
-    "O campo nome é obrigatório."
-  ]
-}
-```
-
 Token inválido
 
 ```
