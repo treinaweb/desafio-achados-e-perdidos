@@ -545,7 +545,7 @@ Dados do usuário:
 **Exemplo de requisição**
 
 ```
-POST /api/locais HTTP/1.1
+GET /api/locais HTTP/1.1
 Host: localhost:8080
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDI0NDY3MjAsImV4cCI6MTY0MjQ1MDMyMCwibmJmIjoxNjQyNDQ2NzIwLCJqdGkiOiJhdzNmak9GNjFTT2JKNTRHIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.NweLZ_H8k2ZaCbPXh0gPvaimaGwnWszB5ypEUx-sKII
 Accept: */*
@@ -557,9 +557,6 @@ Dados válidos:
 
 ```
 HTTP/1.1 200
-Content-Type: application/json
-
-HTTP/1.1 201
 Content-Type: application/json
 
 {
