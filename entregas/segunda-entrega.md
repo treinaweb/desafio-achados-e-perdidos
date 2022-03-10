@@ -150,9 +150,10 @@ Abaixo você encontrará todas as informações do quê e como deve ser desenvol
 
 ### Rotas
 
-| Rota                    | Verbo HTTP | Descrição                                                          |
-|-------------------------|------------|--------------------------------------------------------------------|
-| /api/objetos            | POST       | Rota responsável por cadastrar um objeto o local do usuário logado |
+| Rota                            | Verbo HTTP | Descrição                                                          |
+|---------------------------------|------------|--------------------------------------------------------------------|
+| /api/objetos                    | POST       | Rota responsável por cadastrar um objeto o local do usuário logado |
+| /api/objetos/{objetoId/}/imagem | POST       | Rota responsável por atualizar a foto de um objeto                 |
 
 ### Rota POST /api/objetos
 
@@ -286,6 +287,91 @@ Content-Type: application/json
 
 {
   "message": "Token inválido"
+}
+```
+
+### Rota POST /api/{objetoId}/objetos/imagem
+
+**Dados no cabeçalho da requisição**
+
+| Chave         | Tipo   | Exemplo                                                                                                                                                                                                                                                                                                                                                                      |
+|---------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Authorization | string | Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDI0NDU4NTksImV4cCI6MTY0MjQ0OTQ1OSwibmJmIjoxNjQyNDQ1ODU5LCJqdGkiOiJJdFV1QzA5Q1VGQ0JoTDdpIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.CjMddVkovYEawKXNwuMroajTKb52R4X3dC5NvH1ClW0 |
+
+**Dados no corpo da requisição**
+
+| Campo         | Tipo   | Exemplo |
+|---------------|--------|---------|
+| imagem_objeto | file   | -       |
+
+Regras de validação:
+
+- `imagem_objeto`: não pode ser nulo
+- `imagem_objeto`: deve ser uma imagem
+
+**Dados da resposta**
+
+| Campo    | Tipo   | Exemplo                      |
+|----------|--------|------------------------------|
+| mensagem | string | Imagem definida com sucesso! |
+
+**Exemplo de requisição**
+
+```
+POST /api/objetos/1/imagem HTTP/1.1
+Host: localhost:8080
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hY2hhZG9zLWUtcGVyZGlkb3MtcGhwLmhlcm9rdWFwcC5jb21cL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE2NDI0NDk1OTMsImV4cCI6MTY0MjQ1MzE5MywibmJmIjoxNjQyNDQ5NTkzLCJqdGkiOiJJelhZWHlYQ2ZkanJHV2xmIiwic3ViIjo2MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.d7G7gx_aIrnQh1WS9T9BNiHN0ObCxmRhWnqb0tQ6w4s
+Accept: */*
+```
+
+**Exemplos de respostas**
+
+Dados válidos:
+
+```
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "message": "Imagem definida com sucesso!"
+}
+```
+
+Dados inválidos:
+
+```
+HTTP/1.1 400
+Content-Type: application/json
+
+{
+  "status": 400,
+  "code": "validation_error",
+  "message": "Erro de validação dos dados enviados",
+  "imagem_local": [
+    "O campo imagem local é obrigatório."
+  ]
+}
+```
+
+Token inválido
+
+```
+HTTP/1.1 401
+Content-Type: application/json
+
+{
+  "message": "Token inválido"
+}
+```
+
+Objeto não encontrado
+
+```
+HTTP/1.1 404
+Content-Type: application/json
+
+{
+  "message": "Objeto não encontrado"
 }
 ```
 
