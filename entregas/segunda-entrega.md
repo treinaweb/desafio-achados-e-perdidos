@@ -153,7 +153,7 @@ Abaixo você encontrará todas as informações do quê e como deve ser desenvol
 | Rota                            | Verbo HTTP | Descrição                                                          |
 |---------------------------------|------------|--------------------------------------------------------------------|
 | /api/objetos                    | POST       | Rota responsável por cadastrar um objeto o local do usuário logado |
-| /api/objetos/{objetoId/}/imagem | POST       | Rota responsável por atualizar a foto de um objeto                 |
+| /api/objetos/{objetoId}/imagem  | POST       | Rota responsável por atualizar a foto de um objeto                 |
 
 ### Rota POST /api/objetos
 
@@ -290,7 +290,7 @@ Content-Type: application/json
 }
 ```
 
-### Rota POST /api/{objetoId}/objetos/imagem
+### Rota POST /api/objetos/{objetoId}/imagem
 
 **Dados no cabeçalho da requisição**
 
