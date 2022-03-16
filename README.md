@@ -58,6 +58,4 @@ Abaixo estão os links para acessar os [wireframes](https://pt.wikipedia.org/wik
 O desenvolvimento do sistema será dividido em quatro entregas acumulativas, cada entrega terá quais funcionalidades do sistema devem ser desenvolvidas, abaixo estão os links para ver os detalhes do quê deve ser desenvolvido em cada uma das entregas.
 
 - [Primeira entrega](./entregas/primeira-entrega.md)
-- [Segunda entrega](./entregas/segunda-entrega.md)
-- [Terceira entrega](./entregas/terceira-entrega.md)
-- [Quarta entrega](./entregas/quarta-entrega.md)
+
